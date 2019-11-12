@@ -83,7 +83,7 @@ void SwitchCallback(void *param)
     //!! Print information to the console
     char buff[32];
 
-    sprintf(buff, "psw:%d\r\n", psw->id);
+    sprintf(buff, "psw:%d:1\r\n", psw->id);
     UART1_AsyncWriteString(buff);
 }
 //!! Callback function
@@ -107,8 +107,8 @@ void Worker1(void *param)
 
     //!!
     //!! led:[0,1,2,3]:[on,off]
-    //!!
-    if (0 == str_index_of_first_token(line_data, "led:"))
+    //!!led:n:?
+    if (0 == str_index_of_first_token(line_data, "led:") && line_data[6] != '?')
     {
         char id_c = line_data[4];
         if (id_c >= '0' && id_c <= '3')
@@ -137,7 +137,7 @@ void Worker1(void *param)
 
     //!! Beep sound
     //!! beep:1000:2500 --> beep:<freq>:<period>
-    else if (0 == str_index_of_first_token(line_data, "beep:"))
+    if (0 == str_index_of_first_token(line_data, "beep:"))
     {
         int i1 = str_index_of_first_token(line_data + 0, ":");                // Index of the first colon
         int i2 = str_index_of_first_token(line_data + i1 + 1, ":") + i1 + 1;  // Index of the second colon
@@ -168,10 +168,10 @@ void Worker1(void *param)
 
     //!! ADCs
     //!! adc:[0,1,2,3]?
-    else if (0 == str_index_of_first_token(line_data, "adc:"))
+    if (0 == str_index_of_first_token(line_data, "adc:"))
     {
         char buff[32];
-        if (line_data[5] == '?')
+        if (line_data[5] == ':' && line_data[6] == '?')
         {
             char id_c = line_data[4];
             if (id_c >= '0' && id_c <= '3')
@@ -179,6 +179,40 @@ void Worker1(void *param)
                 int id_i = id_c - 0x30;
                 int adc_val = ADC_Get(id_i);
                 sprintf(buff, "adc:%d:%d\r\n", id_i, adc_val);
+                UART1_AsyncWriteString(buff);
+            }
+        }
+    }
+    //!! PSWs
+    //!! psw:[0,1,2,3]?
+    if (0 == str_index_of_first_token(line_data, "psw:"))
+    {
+        char buff[32];
+        if (line_data[5] == ':' && line_data[6] == '?')
+        {
+            char id_c = line_data[4];
+            if (id_c >= '0' && id_c <= '3')
+            {
+                int id_i = id_c - 0x30;
+                int psw_val = PSW_Get(id_i);
+                sprintf(buff, "psw:%d:%d\r\n", id_i, psw_val);
+                UART1_AsyncWriteString(buff);
+            }
+        }
+    }
+    //!! LEDs
+    //!! led:[0,1,2,3]?
+    if (0 == str_index_of_first_token(line_data, "led:"))
+    {
+        char buff[32];
+        if (line_data[5] == ':' && line_data[6] == '?')
+        {
+            char id_c = line_data[4];
+            if (id_c >= '0' && id_c <= '3')
+            {
+                int id_i = id_c - 0x30;
+                int led_val = LED_Get(id_i);
+                sprintf(buff, "led:%d:%d\r\n", id_i, led_val);
                 UART1_AsyncWriteString(buff);
             }
         }

@@ -171,13 +171,13 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0xc00              0x19aa          0x267f  (9855)
-.const                      0x25aa                0x58            0x84  (132)
-.text                       0x2602              0x22f2          0x346b  (13419)
-.dinit                      0x48f4               0x102           0x183  (387)
-.text                       0x49f6               0x29a           0x3e7  (999)
-.init.delay32               0x4c90                0x1c            0x2a  (42)
+.const                      0x25aa                0x76            0xb1  (177)
+.text                       0x2620              0x23e2          0x35d3  (13779)
+.dinit                      0x4a02               0x102           0x183  (387)
+.text                       0x4b04               0x29a           0x3e7  (999)
+.init.delay32               0x4d9e                0x1c            0x2a  (42)
 
-                 Total "program" memory used (bytes):         0x6102  (24834) 54%
+                 Total "program" memory used (bytes):         0x6297  (25239) 55%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -337,234 +337,234 @@ External Symbols in Program Memory (by address):
                   0x0024ce                  ___divdi3
                   0x00252e                  ___moddi3
                   0x00258a                  ___floatdisf
-                  0x002602                  _Uart1_GetRingBuffer
-                  0x00263a                  _Uart2_GetRingBuffer
-                  0x002672                  _Uart1_ClearRingBuffer
-                  0x00269c                  _Uart2_ClearRingBuffer
-                  0x0026c6                  _Uart1_Init
-                  0x0027ce                  _Uart2_Init
-                  0x0028d6                  _Uart1_AsyncWriteString
-                  0x002960                  _Uart2_AsyncWriteString
-                  0x0029e8                  _Uart1_AsyncWriteBytes
-                  0x002a5c                  _Uart1_AsyncWriteData
-                  0x002adc                  _Uart1_AsyncPutByte
-                  0x002b32                  _Uart2_AsyncWriteBytes
-                  0x002ba6                  _Uart2_AsyncWriteData
-                  0x002c26                  _Uart2_AsyncPutByte
-                  0x002cac                  _Uart1_WriteString
-                  0x002cd6                  _Uart2_WriteString
-                  0x002d00                  _Uart1_PutByte
-                  0x002d0e                  _Uart2_PutByte
-                  0x002d1c                  _Uart1_WriteBytes
-                  0x002d50                  _Uart2_WriteBytes
-                  0x002d84                  _Uart1_GetByte
-                  0x002da4                  _Uart2_GetByte
-                  0x002dc4                  _OS_SystemTickSetCallback
-                  0x002dd6                  _OS_Uart1SetRxCallback
-                  0x002de2                  _OS_Uart1SetLineReceivedCallback
-                  0x002dee                  _OS_Uart1SetTxCallback
-                  0x002dfa                  _OS_Uart2SetRxCallback
-                  0x002e06                  _OS_Uart2SetLineReceivedCallback
-                  0x002e12                  _OS_Uart2SetTxCallback
-                  0x002e1e                  _OS_WiFiSetFrameReceivedCallback
-                  0x002e2a                  _OS_TimeService
-                  0x002e76                  _OS_TimeGet
-                  0x002e9a                  _OS_TimeSet
-                  0x002ebe                  _OS_TimeHighResolution
-                  0x002eee                  _OS_TimeMicroseconds
-                  0x002f16                  _OS_TimeMilliseconds
-                  0x002f20                  _OS_TickedCheck
-                  0x002f32                  _OS_TimerCoreInit
-                  0x002f50                  _OS_Sleep
-                  0x002f5c                  _OS_Initialise
-                  0x002f74                  _OS_WiFiFrameDetect
-                  0x0030f8                  _OS_LineDetect
-                  0x00315a                  _OS_Execute
-                  0x00338a                  _str_length
-                  0x0033b0                  _str_copy
-                  0x0033ea                  _str_raw_copy
-                  0x003428                  _str_index_of_first_token
-                  0x003492                  _str_raw_index_of_first_token
-                  0x0034fc                  _str_index_of_last_token
-                  0x00356c                  _str_first_char
-                  0x0035ae                  _str_index_of_first_char
-                  0x0035e4                  _str_index_of_last_char
-                  0x00361c                  _str_last_char
-                  0x003662                  _str_sub_string
-                  0x0036f0                  _str_crop_string
-                  0x00374a                  _str_to_int
-                  0x0037da                  _str_trim_left
-                  0x003830                  _str_trim_right
-                  0x003882                  _str_remove_char
-                  0x0038d4                  _str_replace_char
-                  0x003934                  _LED_Service
-                  0x003a08                  _LED_Flash
-                  0x003a24                  _LED_ModeSet
-                  0x003a3c                  _LED_PwmSet
-                  0x003a6e                  _LED_SetPwmPeriod
-                  0x003a96                  _LED_PwmSetOnTime
-                  0x003abe                  _LED_PwmSetShift
-                  0x003ae6                  _LED_Write
-                  0x003b5e                  _LED_Read
-                  0x003b94                  _LED_Init
-                  0x003bec                  _LED_Set
-                  0x003c1e                  _LED_Clr
-                  0x003c50                  _LED_Inv
-                  0x003cea                  _LED_Get
-                  0x003d4e                  _OS_WorkerInit
-                  0x003da0                  _OS_WorkerCreate
-                  0x003e12                  _OS_WorkerDelete
-                  0x003e7e                  _OS_WorkerSetCallback
-                  0x003e9c                  _OS_WorkerSleep
-                  0x003ec6                  _OS_WorkerWakeup
-                  0x003ef4                  _OS_WorkerWaitData
-                  0x003f1e                  _OS_WorkerSendData
-                  0x003f4c                  _OS_WorkerService
-                  0x00402e                  _UartLineCallback
-                  0x0040c6                  _SwitchCallback
-                  0x0040ee                  _Worker1
-                  0x004284                  _main
-                  0x0042e8                  _PSW_Init
-                  0x004328                  _OS_SwitchSetCallback
-                  0x004342                  _PSW_Get
-                  0x0043ac                  _PSW_Scan
-                  0x0043ea                  _PSW_Read
-                  0x00445a                  _PSW_Service
-                  0x004572                  _OS_TimerInit
-                  0x0045be                  _OS_TimerCreate
-                  0x00462c                  _OS_TimerDelete
-                  0x00468a                  _OS_TimerSetCallback
-                  0x0046a8                  _OS_TimerSetTicks
-                  0x0046c6                  _OS_TimerStop
-                  0x0046e2                  _OS_TimerStart
-                  0x004706                  _OS_TimerService
-                  0x0047d2                  _Beep_Init
-                  0x004812                  _Beep_FreqSet
-                  0x00485e                  _Beep_PowerSet
-                  0x00488a                  _Beep
-                  0x0048c6                  _Beep_Service
-                  0x0049f6                  _Queue_Init
-                  0x004a26                  _Queue_Put
-                  0x004a82                  _Queue_Get
-                  0x004ae2                  _Queue_Space
-                  0x004af4                  _OS_EventPut
-                  0x004b40                  _OS_EventGet
-                  0x004b8e                  _OS_EventLoop
-                  0x004ba4                  _ADC_Service
-                  0x004baa                  _Timer3Init
-                  0x004bc6                  _ADC_Scan
-                  0x004bcc                  _ADC_Read
-                  0x004bde                  _ADC_Init
-                  0x004c50                  _MCU_UnlockRegisters
-                  0x004c62                  _MCU_LockRegisters
-                  0x004c74                  _MCU_Init
-                  0x004c90                  ___delay32
+                  0x002620                  _Uart1_GetRingBuffer
+                  0x002658                  _Uart2_GetRingBuffer
+                  0x002690                  _Uart1_ClearRingBuffer
+                  0x0026ba                  _Uart2_ClearRingBuffer
+                  0x0026e4                  _Uart1_Init
+                  0x0027ec                  _Uart2_Init
+                  0x0028f4                  _Uart1_AsyncWriteString
+                  0x00297e                  _Uart2_AsyncWriteString
+                  0x002a06                  _Uart1_AsyncWriteBytes
+                  0x002a7a                  _Uart1_AsyncWriteData
+                  0x002afa                  _Uart1_AsyncPutByte
+                  0x002b50                  _Uart2_AsyncWriteBytes
+                  0x002bc4                  _Uart2_AsyncWriteData
+                  0x002c44                  _Uart2_AsyncPutByte
+                  0x002cca                  _Uart1_WriteString
+                  0x002cf4                  _Uart2_WriteString
+                  0x002d1e                  _Uart1_PutByte
+                  0x002d2c                  _Uart2_PutByte
+                  0x002d3a                  _Uart1_WriteBytes
+                  0x002d6e                  _Uart2_WriteBytes
+                  0x002da2                  _Uart1_GetByte
+                  0x002dc2                  _Uart2_GetByte
+                  0x002de2                  _OS_SystemTickSetCallback
+                  0x002df4                  _OS_Uart1SetRxCallback
+                  0x002e00                  _OS_Uart1SetLineReceivedCallback
+                  0x002e0c                  _OS_Uart1SetTxCallback
+                  0x002e18                  _OS_Uart2SetRxCallback
+                  0x002e24                  _OS_Uart2SetLineReceivedCallback
+                  0x002e30                  _OS_Uart2SetTxCallback
+                  0x002e3c                  _OS_WiFiSetFrameReceivedCallback
+                  0x002e48                  _OS_TimeService
+                  0x002e94                  _OS_TimeGet
+                  0x002eb8                  _OS_TimeSet
+                  0x002edc                  _OS_TimeHighResolution
+                  0x002f0c                  _OS_TimeMicroseconds
+                  0x002f34                  _OS_TimeMilliseconds
+                  0x002f3e                  _OS_TickedCheck
+                  0x002f50                  _OS_TimerCoreInit
+                  0x002f6e                  _OS_Sleep
+                  0x002f7a                  _OS_Initialise
+                  0x002f92                  _OS_WiFiFrameDetect
+                  0x003116                  _OS_LineDetect
+                  0x003178                  _OS_Execute
+                  0x0033a8                  _str_length
+                  0x0033ce                  _str_copy
+                  0x003408                  _str_raw_copy
+                  0x003446                  _str_index_of_first_token
+                  0x0034b0                  _str_raw_index_of_first_token
+                  0x00351a                  _str_index_of_last_token
+                  0x00358a                  _str_first_char
+                  0x0035cc                  _str_index_of_first_char
+                  0x003602                  _str_index_of_last_char
+                  0x00363a                  _str_last_char
+                  0x003680                  _str_sub_string
+                  0x00370e                  _str_crop_string
+                  0x003768                  _str_to_int
+                  0x0037f8                  _str_trim_left
+                  0x00384e                  _str_trim_right
+                  0x0038a0                  _str_remove_char
+                  0x0038f2                  _str_replace_char
+                  0x003952                  _LED_Service
+                  0x003a26                  _LED_Flash
+                  0x003a42                  _LED_ModeSet
+                  0x003a5a                  _LED_PwmSet
+                  0x003a8c                  _LED_SetPwmPeriod
+                  0x003ab4                  _LED_PwmSetOnTime
+                  0x003adc                  _LED_PwmSetShift
+                  0x003b04                  _LED_Write
+                  0x003b7c                  _LED_Read
+                  0x003bb2                  _LED_Init
+                  0x003c0a                  _LED_Set
+                  0x003c3c                  _LED_Clr
+                  0x003c6e                  _LED_Inv
+                  0x003d08                  _LED_Get
+                  0x003d6c                  _UartLineCallback
+                  0x003e04                  _SwitchCallback
+                  0x003e2c                  _Worker1
+                  0x0040b2                  _main
+                  0x004116                  _OS_WorkerInit
+                  0x004168                  _OS_WorkerCreate
+                  0x0041da                  _OS_WorkerDelete
+                  0x004246                  _OS_WorkerSetCallback
+                  0x004264                  _OS_WorkerSleep
+                  0x00428e                  _OS_WorkerWakeup
+                  0x0042bc                  _OS_WorkerWaitData
+                  0x0042e6                  _OS_WorkerSendData
+                  0x004314                  _OS_WorkerService
+                  0x0043f6                  _PSW_Init
+                  0x004436                  _OS_SwitchSetCallback
+                  0x004450                  _PSW_Get
+                  0x0044ba                  _PSW_Scan
+                  0x0044f8                  _PSW_Read
+                  0x004568                  _PSW_Service
+                  0x004680                  _OS_TimerInit
+                  0x0046cc                  _OS_TimerCreate
+                  0x00473a                  _OS_TimerDelete
+                  0x004798                  _OS_TimerSetCallback
+                  0x0047b6                  _OS_TimerSetTicks
+                  0x0047d4                  _OS_TimerStop
+                  0x0047f0                  _OS_TimerStart
+                  0x004814                  _OS_TimerService
+                  0x0048e0                  _Beep_Init
+                  0x004920                  _Beep_FreqSet
+                  0x00496c                  _Beep_PowerSet
+                  0x004998                  _Beep
+                  0x0049d4                  _Beep_Service
+                  0x004b04                  _Queue_Init
+                  0x004b34                  _Queue_Put
+                  0x004b90                  _Queue_Get
+                  0x004bf0                  _Queue_Space
+                  0x004c02                  _OS_EventPut
+                  0x004c4e                  _OS_EventGet
+                  0x004c9c                  _OS_EventLoop
+                  0x004cb2                  _ADC_Service
+                  0x004cb8                  _Timer3Init
+                  0x004cd4                  _ADC_Scan
+                  0x004cda                  _ADC_Read
+                  0x004cec                  _ADC_Init
+                  0x004d5e                  _MCU_UnlockRegisters
+                  0x004d70                  _MCU_LockRegisters
+                  0x004d82                  _MCU_Init
+                  0x004d9e                  ___delay32
 
 External Symbols in Program Memory (by name):
 
-                  0x004bde                  _ADC_Init
-                  0x004bcc                  _ADC_Read
-                  0x004bc6                  _ADC_Scan
-                  0x004ba4                  _ADC_Service
-                  0x00488a                  _Beep
-                  0x004812                  _Beep_FreqSet
-                  0x0047d2                  _Beep_Init
-                  0x00485e                  _Beep_PowerSet
-                  0x0048c6                  _Beep_Service
-                  0x003c1e                  _LED_Clr
-                  0x003a08                  _LED_Flash
-                  0x003cea                  _LED_Get
-                  0x003b94                  _LED_Init
-                  0x003c50                  _LED_Inv
-                  0x003a24                  _LED_ModeSet
-                  0x003a3c                  _LED_PwmSet
-                  0x003a96                  _LED_PwmSetOnTime
-                  0x003abe                  _LED_PwmSetShift
-                  0x003b5e                  _LED_Read
-                  0x003934                  _LED_Service
-                  0x003bec                  _LED_Set
-                  0x003a6e                  _LED_SetPwmPeriod
-                  0x003ae6                  _LED_Write
-                  0x004c74                  _MCU_Init
-                  0x004c62                  _MCU_LockRegisters
-                  0x004c50                  _MCU_UnlockRegisters
-                  0x004b40                  _OS_EventGet
-                  0x004b8e                  _OS_EventLoop
-                  0x004af4                  _OS_EventPut
-                  0x00315a                  _OS_Execute
-                  0x002f5c                  _OS_Initialise
-                  0x0030f8                  _OS_LineDetect
-                  0x002f50                  _OS_Sleep
-                  0x004328                  _OS_SwitchSetCallback
-                  0x002dc4                  _OS_SystemTickSetCallback
-                  0x002f20                  _OS_TickedCheck
-                  0x002e76                  _OS_TimeGet
-                  0x002ebe                  _OS_TimeHighResolution
-                  0x002eee                  _OS_TimeMicroseconds
-                  0x002f16                  _OS_TimeMilliseconds
-                  0x002e2a                  _OS_TimeService
-                  0x002e9a                  _OS_TimeSet
-                  0x002f32                  _OS_TimerCoreInit
-                  0x0045be                  _OS_TimerCreate
-                  0x00462c                  _OS_TimerDelete
-                  0x004572                  _OS_TimerInit
-                  0x004706                  _OS_TimerService
-                  0x00468a                  _OS_TimerSetCallback
-                  0x0046a8                  _OS_TimerSetTicks
-                  0x0046e2                  _OS_TimerStart
-                  0x0046c6                  _OS_TimerStop
-                  0x002de2                  _OS_Uart1SetLineReceivedCallback
-                  0x002dd6                  _OS_Uart1SetRxCallback
-                  0x002dee                  _OS_Uart1SetTxCallback
-                  0x002e06                  _OS_Uart2SetLineReceivedCallback
-                  0x002dfa                  _OS_Uart2SetRxCallback
-                  0x002e12                  _OS_Uart2SetTxCallback
-                  0x002f74                  _OS_WiFiFrameDetect
-                  0x002e1e                  _OS_WiFiSetFrameReceivedCallback
-                  0x003da0                  _OS_WorkerCreate
-                  0x003e12                  _OS_WorkerDelete
-                  0x003d4e                  _OS_WorkerInit
-                  0x003f1e                  _OS_WorkerSendData
-                  0x003f4c                  _OS_WorkerService
-                  0x003e7e                  _OS_WorkerSetCallback
-                  0x003e9c                  _OS_WorkerSleep
-                  0x003ef4                  _OS_WorkerWaitData
-                  0x003ec6                  _OS_WorkerWakeup
-                  0x004342                  _PSW_Get
-                  0x0042e8                  _PSW_Init
-                  0x0043ea                  _PSW_Read
-                  0x0043ac                  _PSW_Scan
-                  0x00445a                  _PSW_Service
-                  0x004a82                  _Queue_Get
-                  0x0049f6                  _Queue_Init
-                  0x004a26                  _Queue_Put
-                  0x004ae2                  _Queue_Space
-                  0x0040c6                  _SwitchCallback
-                  0x004baa                  _Timer3Init
-                  0x002adc                  _Uart1_AsyncPutByte
-                  0x0029e8                  _Uart1_AsyncWriteBytes
-                  0x002a5c                  _Uart1_AsyncWriteData
-                  0x0028d6                  _Uart1_AsyncWriteString
-                  0x002672                  _Uart1_ClearRingBuffer
-                  0x002d84                  _Uart1_GetByte
-                  0x002602                  _Uart1_GetRingBuffer
-                  0x0026c6                  _Uart1_Init
-                  0x002d00                  _Uart1_PutByte
-                  0x002d1c                  _Uart1_WriteBytes
-                  0x002cac                  _Uart1_WriteString
-                  0x002c26                  _Uart2_AsyncPutByte
-                  0x002b32                  _Uart2_AsyncWriteBytes
-                  0x002ba6                  _Uart2_AsyncWriteData
-                  0x002960                  _Uart2_AsyncWriteString
-                  0x00269c                  _Uart2_ClearRingBuffer
-                  0x002da4                  _Uart2_GetByte
-                  0x00263a                  _Uart2_GetRingBuffer
-                  0x0027ce                  _Uart2_Init
-                  0x002d0e                  _Uart2_PutByte
-                  0x002d50                  _Uart2_WriteBytes
-                  0x002cd6                  _Uart2_WriteString
-                  0x00402e                  _UartLineCallback
-                  0x0040ee                  _Worker1
+                  0x004cec                  _ADC_Init
+                  0x004cda                  _ADC_Read
+                  0x004cd4                  _ADC_Scan
+                  0x004cb2                  _ADC_Service
+                  0x004998                  _Beep
+                  0x004920                  _Beep_FreqSet
+                  0x0048e0                  _Beep_Init
+                  0x00496c                  _Beep_PowerSet
+                  0x0049d4                  _Beep_Service
+                  0x003c3c                  _LED_Clr
+                  0x003a26                  _LED_Flash
+                  0x003d08                  _LED_Get
+                  0x003bb2                  _LED_Init
+                  0x003c6e                  _LED_Inv
+                  0x003a42                  _LED_ModeSet
+                  0x003a5a                  _LED_PwmSet
+                  0x003ab4                  _LED_PwmSetOnTime
+                  0x003adc                  _LED_PwmSetShift
+                  0x003b7c                  _LED_Read
+                  0x003952                  _LED_Service
+                  0x003c0a                  _LED_Set
+                  0x003a8c                  _LED_SetPwmPeriod
+                  0x003b04                  _LED_Write
+                  0x004d82                  _MCU_Init
+                  0x004d70                  _MCU_LockRegisters
+                  0x004d5e                  _MCU_UnlockRegisters
+                  0x004c4e                  _OS_EventGet
+                  0x004c9c                  _OS_EventLoop
+                  0x004c02                  _OS_EventPut
+                  0x003178                  _OS_Execute
+                  0x002f7a                  _OS_Initialise
+                  0x003116                  _OS_LineDetect
+                  0x002f6e                  _OS_Sleep
+                  0x004436                  _OS_SwitchSetCallback
+                  0x002de2                  _OS_SystemTickSetCallback
+                  0x002f3e                  _OS_TickedCheck
+                  0x002e94                  _OS_TimeGet
+                  0x002edc                  _OS_TimeHighResolution
+                  0x002f0c                  _OS_TimeMicroseconds
+                  0x002f34                  _OS_TimeMilliseconds
+                  0x002e48                  _OS_TimeService
+                  0x002eb8                  _OS_TimeSet
+                  0x002f50                  _OS_TimerCoreInit
+                  0x0046cc                  _OS_TimerCreate
+                  0x00473a                  _OS_TimerDelete
+                  0x004680                  _OS_TimerInit
+                  0x004814                  _OS_TimerService
+                  0x004798                  _OS_TimerSetCallback
+                  0x0047b6                  _OS_TimerSetTicks
+                  0x0047f0                  _OS_TimerStart
+                  0x0047d4                  _OS_TimerStop
+                  0x002e00                  _OS_Uart1SetLineReceivedCallback
+                  0x002df4                  _OS_Uart1SetRxCallback
+                  0x002e0c                  _OS_Uart1SetTxCallback
+                  0x002e24                  _OS_Uart2SetLineReceivedCallback
+                  0x002e18                  _OS_Uart2SetRxCallback
+                  0x002e30                  _OS_Uart2SetTxCallback
+                  0x002f92                  _OS_WiFiFrameDetect
+                  0x002e3c                  _OS_WiFiSetFrameReceivedCallback
+                  0x004168                  _OS_WorkerCreate
+                  0x0041da                  _OS_WorkerDelete
+                  0x004116                  _OS_WorkerInit
+                  0x0042e6                  _OS_WorkerSendData
+                  0x004314                  _OS_WorkerService
+                  0x004246                  _OS_WorkerSetCallback
+                  0x004264                  _OS_WorkerSleep
+                  0x0042bc                  _OS_WorkerWaitData
+                  0x00428e                  _OS_WorkerWakeup
+                  0x004450                  _PSW_Get
+                  0x0043f6                  _PSW_Init
+                  0x0044f8                  _PSW_Read
+                  0x0044ba                  _PSW_Scan
+                  0x004568                  _PSW_Service
+                  0x004b90                  _Queue_Get
+                  0x004b04                  _Queue_Init
+                  0x004b34                  _Queue_Put
+                  0x004bf0                  _Queue_Space
+                  0x003e04                  _SwitchCallback
+                  0x004cb8                  _Timer3Init
+                  0x002afa                  _Uart1_AsyncPutByte
+                  0x002a06                  _Uart1_AsyncWriteBytes
+                  0x002a7a                  _Uart1_AsyncWriteData
+                  0x0028f4                  _Uart1_AsyncWriteString
+                  0x002690                  _Uart1_ClearRingBuffer
+                  0x002da2                  _Uart1_GetByte
+                  0x002620                  _Uart1_GetRingBuffer
+                  0x0026e4                  _Uart1_Init
+                  0x002d1e                  _Uart1_PutByte
+                  0x002d3a                  _Uart1_WriteBytes
+                  0x002cca                  _Uart1_WriteString
+                  0x002c44                  _Uart2_AsyncPutByte
+                  0x002b50                  _Uart2_AsyncWriteBytes
+                  0x002bc4                  _Uart2_AsyncWriteData
+                  0x00297e                  _Uart2_AsyncWriteString
+                  0x0026ba                  _Uart2_ClearRingBuffer
+                  0x002dc2                  _Uart2_GetByte
+                  0x002658                  _Uart2_GetRingBuffer
+                  0x0027ec                  _Uart2_Init
+                  0x002d2c                  _Uart2_PutByte
+                  0x002d6e                  _Uart2_WriteBytes
+                  0x002cf4                  _Uart2_WriteString
+                  0x003d6c                  _UartLineCallback
+                  0x003e2c                  _Worker1
                   0x000faa                  __ADC1Interrupt
                   0x00100a                  __DefaultInterrupt
                   0x001f04                  __FDnorm
@@ -589,7 +589,7 @@ External Symbols in Program Memory (by name):
                   0x001b44                  ___Printf_cdnopuxX
                   0x001ca8                  ___Putfld_cdnopuxX
                   0x001012                  ___addsf3
-                  0x004c90                  ___delay32
+                  0x004d9e                  ___delay32
                   0x0024ce                  ___divdi3
                   0x0010cc                  ___divsf3
                   0x002330                  ___divsi3
@@ -626,27 +626,27 @@ External Symbols in Program Memory (by name):
                   0x001b26                  __sprintf_cdnopuxX
                   0x0018d8                  _isalnum
                   0x0018f4                  _isspace
-                  0x004284                  _main
+                  0x0040b2                  _main
                   0x001ed8                  _memchr
                   0x001330                  _memcpy
                   0x00133e                  _memset
-                  0x0033b0                  _str_copy
-                  0x0036f0                  _str_crop_string
-                  0x00356c                  _str_first_char
-                  0x0035ae                  _str_index_of_first_char
-                  0x003428                  _str_index_of_first_token
-                  0x0035e4                  _str_index_of_last_char
-                  0x0034fc                  _str_index_of_last_token
-                  0x00361c                  _str_last_char
-                  0x00338a                  _str_length
-                  0x0033ea                  _str_raw_copy
-                  0x003492                  _str_raw_index_of_first_token
-                  0x003882                  _str_remove_char
-                  0x0038d4                  _str_replace_char
-                  0x003662                  _str_sub_string
-                  0x00374a                  _str_to_int
-                  0x0037da                  _str_trim_left
-                  0x003830                  _str_trim_right
+                  0x0033ce                  _str_copy
+                  0x00370e                  _str_crop_string
+                  0x00358a                  _str_first_char
+                  0x0035cc                  _str_index_of_first_char
+                  0x003446                  _str_index_of_first_token
+                  0x003602                  _str_index_of_last_char
+                  0x00351a                  _str_index_of_last_token
+                  0x00363a                  _str_last_char
+                  0x0033a8                  _str_length
+                  0x003408                  _str_raw_copy
+                  0x0034b0                  _str_raw_index_of_first_token
+                  0x0038a0                  _str_remove_char
+                  0x0038f2                  _str_replace_char
+                  0x003680                  _str_sub_string
+                  0x003768                  _str_to_int
+                  0x0037f8                  _str_trim_left
+                  0x00384e                  _str_trim_right
                   0x001eec                  _strchr
                   0x001b18                  sprintf_cdnopuxX.XXeo:_prout
 
@@ -863,21 +863,21 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x8877
+.debug_info       0x000000       0x893a
  *(.debug_info)
- .debug_info      0x000000        0x8bb ./output/main.o
- .debug_info      0x0008bb        0x333 ../../library/os-lib/lib.X.a(mcu.o)
- .debug_info      0x000bee       0x22fb ../../library/os-lib/lib.X.a(uart.o)
- .debug_info      0x002ee9        0xbca ../../library/os-lib/lib.X.a(led.o)
- .debug_info      0x003ab3        0x336 ../../library/os-lib/lib.X.a(event.o)
- .debug_info      0x003de9       0x134c ../../library/os-lib/lib.X.a(os.o)
- .debug_info      0x005135        0x904 ../../library/os-lib/lib.X.a(psw.o)
- .debug_info      0x005a39        0x6e8 ../../library/os-lib/lib.X.a(stimer.o)
- .debug_info      0x006121        0x7f7 ../../library/os-lib/lib.X.a(str.o)
- .debug_info      0x006918        0x740 ../../library/os-lib/lib.X.a(worker.o)
- .debug_info      0x007058        0xd9e ../../library/os-lib/lib.X.a(adc.o)
- .debug_info      0x007df6        0x7e6 ../../library/os-lib/lib.X.a(beep.o)
- .debug_info      0x0085dc        0x29b ../../library/os-lib/lib.X.a(queue.o)
+ .debug_info      0x000000        0x97e ./output/main.o
+ .debug_info      0x00097e        0x333 ../../library/os-lib/lib.X.a(mcu.o)
+ .debug_info      0x000cb1       0x22fb ../../library/os-lib/lib.X.a(uart.o)
+ .debug_info      0x002fac        0xbca ../../library/os-lib/lib.X.a(led.o)
+ .debug_info      0x003b76        0x336 ../../library/os-lib/lib.X.a(event.o)
+ .debug_info      0x003eac       0x134c ../../library/os-lib/lib.X.a(os.o)
+ .debug_info      0x0051f8        0x904 ../../library/os-lib/lib.X.a(psw.o)
+ .debug_info      0x005afc        0x6e8 ../../library/os-lib/lib.X.a(stimer.o)
+ .debug_info      0x0061e4        0x7f7 ../../library/os-lib/lib.X.a(str.o)
+ .debug_info      0x0069db        0x740 ../../library/os-lib/lib.X.a(worker.o)
+ .debug_info      0x00711b        0xd9e ../../library/os-lib/lib.X.a(adc.o)
+ .debug_info      0x007eb9        0x7e6 ../../library/os-lib/lib.X.a(beep.o)
+ .debug_info      0x00869f        0x29b ../../library/os-lib/lib.X.a(queue.o)
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000       0x121f
@@ -896,37 +896,37 @@ __CONFIG1
  .debug_abbrev    0x00105a        0x10f ../../library/os-lib/lib.X.a(beep.o)
  .debug_abbrev    0x001169         0xb6 ../../library/os-lib/lib.X.a(queue.o)
 
-.debug_line       0x000000       0x10e6
+.debug_line       0x000000       0x10fc
  *(.debug_line)
- .debug_line      0x000000        0x193 ./output/main.o
- .debug_line      0x000193         0xab ../../library/os-lib/lib.X.a(mcu.o)
- .debug_line      0x00023e        0x270 ../../library/os-lib/lib.X.a(uart.o)
- .debug_line      0x0004ae        0x183 ../../library/os-lib/lib.X.a(led.o)
- .debug_line      0x000631         0xc7 ../../library/os-lib/lib.X.a(event.o)
- .debug_line      0x0006f8        0x21e ../../library/os-lib/lib.X.a(os.o)
- .debug_line      0x000916        0x177 ../../library/os-lib/lib.X.a(psw.o)
- .debug_line      0x000a8d        0x185 ../../library/os-lib/lib.X.a(stimer.o)
- .debug_line      0x000c12        0x112 ../../library/os-lib/lib.X.a(str.o)
- .debug_line      0x000d24        0x198 ../../library/os-lib/lib.X.a(worker.o)
- .debug_line      0x000ebc         0xf2 ../../library/os-lib/lib.X.a(adc.o)
- .debug_line      0x000fae         0xce ../../library/os-lib/lib.X.a(beep.o)
- .debug_line      0x00107c         0x6a ../../library/os-lib/lib.X.a(queue.o)
+ .debug_line      0x000000        0x1a9 ./output/main.o
+ .debug_line      0x0001a9         0xab ../../library/os-lib/lib.X.a(mcu.o)
+ .debug_line      0x000254        0x270 ../../library/os-lib/lib.X.a(uart.o)
+ .debug_line      0x0004c4        0x183 ../../library/os-lib/lib.X.a(led.o)
+ .debug_line      0x000647         0xc7 ../../library/os-lib/lib.X.a(event.o)
+ .debug_line      0x00070e        0x21e ../../library/os-lib/lib.X.a(os.o)
+ .debug_line      0x00092c        0x177 ../../library/os-lib/lib.X.a(psw.o)
+ .debug_line      0x000aa3        0x185 ../../library/os-lib/lib.X.a(stimer.o)
+ .debug_line      0x000c28        0x112 ../../library/os-lib/lib.X.a(str.o)
+ .debug_line      0x000d3a        0x198 ../../library/os-lib/lib.X.a(worker.o)
+ .debug_line      0x000ed2         0xf2 ../../library/os-lib/lib.X.a(adc.o)
+ .debug_line      0x000fc4         0xce ../../library/os-lib/lib.X.a(beep.o)
+ .debug_line      0x001092         0x6a ../../library/os-lib/lib.X.a(queue.o)
 
-.debug_frame      0x000000       0x1058
+.debug_frame      0x000000       0x1074
  *(.debug_frame)
- .debug_frame     0x000000         0xa0 ./output/main.o
- .debug_frame     0x0000a0         0x68 ../../library/os-lib/lib.X.a(mcu.o)
- .debug_frame     0x000108        0x3c4 ../../library/os-lib/lib.X.a(uart.o)
- .debug_frame     0x0004cc        0x19c ../../library/os-lib/lib.X.a(led.o)
- .debug_frame     0x000668         0x68 ../../library/os-lib/lib.X.a(event.o)
- .debug_frame     0x0006d0        0x2ac ../../library/os-lib/lib.X.a(os.o)
- .debug_frame     0x00097c         0xd8 ../../library/os-lib/lib.X.a(psw.o)
- .debug_frame     0x000a54         0xf4 ../../library/os-lib/lib.X.a(stimer.o)
- .debug_frame     0x000b48        0x1f0 ../../library/os-lib/lib.X.a(str.o)
- .debug_frame     0x000d38        0x110 ../../library/os-lib/lib.X.a(worker.o)
- .debug_frame     0x000e48         0xe6 ../../library/os-lib/lib.X.a(adc.o)
- .debug_frame     0x000f2e         0xa6 ../../library/os-lib/lib.X.a(beep.o)
- .debug_frame     0x000fd4         0x84 ../../library/os-lib/lib.X.a(queue.o)
+ .debug_frame     0x000000         0xbc ./output/main.o
+ .debug_frame     0x0000bc         0x68 ../../library/os-lib/lib.X.a(mcu.o)
+ .debug_frame     0x000124        0x3c4 ../../library/os-lib/lib.X.a(uart.o)
+ .debug_frame     0x0004e8        0x19c ../../library/os-lib/lib.X.a(led.o)
+ .debug_frame     0x000684         0x68 ../../library/os-lib/lib.X.a(event.o)
+ .debug_frame     0x0006ec        0x2ac ../../library/os-lib/lib.X.a(os.o)
+ .debug_frame     0x000998         0xd8 ../../library/os-lib/lib.X.a(psw.o)
+ .debug_frame     0x000a70         0xf4 ../../library/os-lib/lib.X.a(stimer.o)
+ .debug_frame     0x000b64        0x1f0 ../../library/os-lib/lib.X.a(str.o)
+ .debug_frame     0x000d54        0x110 ../../library/os-lib/lib.X.a(worker.o)
+ .debug_frame     0x000e64         0xe6 ../../library/os-lib/lib.X.a(adc.o)
+ .debug_frame     0x000f4a         0xa6 ../../library/os-lib/lib.X.a(beep.o)
+ .debug_frame     0x000ff0         0x84 ../../library/os-lib/lib.X.a(queue.o)
 
 .debug_str        0x000000        0x33a
  *(.debug_str)
@@ -2109,152 +2109,152 @@ __c30_signature
  .ivt._T3Interrupt
                     0x0024          0x2 ../../library/os-lib/lib.X.a(adc.o)
 
-.const              0xa5aa         0x58 load address 0x0025aa  
- .const             0xa5aa         0x50 ./output/main.o
- .const             0xa5fa          0x6 ../../library/os-lib/lib.X.a(os.o)
- .const             0xa600          0x2 ../../library/os-lib/lib.X.a(worker.o)
+.const              0xa5aa         0x76 load address 0x0025aa  
+ .const             0xa5aa         0x6e ./output/main.o
+ .const             0xa618          0x6 ../../library/os-lib/lib.X.a(os.o)
+ .const             0xa61e          0x2 ../../library/os-lib/lib.X.a(worker.o)
 
-.text             0x002602       0x22f2
- .text            0x002602        0x7c2 ../../library/os-lib/lib.X.a(uart.o)
-                  0x002602                  _Uart1_GetRingBuffer
-                  0x00263a                  _Uart2_GetRingBuffer
-                  0x002672                  _Uart1_ClearRingBuffer
-                  0x00269c                  _Uart2_ClearRingBuffer
-                  0x0026c6                  _Uart1_Init
-                  0x0027ce                  _Uart2_Init
-                  0x0028d6                  _Uart1_AsyncWriteString
-                  0x002960                  _Uart2_AsyncWriteString
-                  0x0029e8                  _Uart1_AsyncWriteBytes
-                  0x002a5c                  _Uart1_AsyncWriteData
-                  0x002adc                  _Uart1_AsyncPutByte
-                  0x002b32                  _Uart2_AsyncWriteBytes
-                  0x002ba6                  _Uart2_AsyncWriteData
-                  0x002c26                  _Uart2_AsyncPutByte
-                  0x002cac                  _Uart1_WriteString
-                  0x002cd6                  _Uart2_WriteString
-                  0x002d00                  _Uart1_PutByte
-                  0x002d0e                  _Uart2_PutByte
-                  0x002d1c                  _Uart1_WriteBytes
-                  0x002d50                  _Uart2_WriteBytes
-                  0x002d84                  _Uart1_GetByte
-                  0x002da4                  _Uart2_GetByte
- .text            0x002dc4        0x5c6 ../../library/os-lib/lib.X.a(os.o)
-                  0x002dc4                  _OS_SystemTickSetCallback
-                  0x002dd6                  _OS_Uart1SetRxCallback
-                  0x002de2                  _OS_Uart1SetLineReceivedCallback
-                  0x002dee                  _OS_Uart1SetTxCallback
-                  0x002dfa                  _OS_Uart2SetRxCallback
-                  0x002e06                  _OS_Uart2SetLineReceivedCallback
-                  0x002e12                  _OS_Uart2SetTxCallback
-                  0x002e1e                  _OS_WiFiSetFrameReceivedCallback
-                  0x002e2a                  _OS_TimeService
-                  0x002e76                  _OS_TimeGet
-                  0x002e9a                  _OS_TimeSet
-                  0x002ebe                  _OS_TimeHighResolution
-                  0x002eee                  _OS_TimeMicroseconds
-                  0x002f16                  _OS_TimeMilliseconds
-                  0x002f20                  _OS_TickedCheck
-                  0x002f32                  _OS_TimerCoreInit
-                  0x002f50                  _OS_Sleep
-                  0x002f5c                  _OS_Initialise
-                  0x002f74                  _OS_WiFiFrameDetect
-                  0x0030f8                  _OS_LineDetect
-                  0x00315a                  _OS_Execute
- .text            0x00338a        0x5aa ../../library/os-lib/lib.X.a(str.o)
-                  0x00338a                  _str_length
-                  0x0033b0                  _str_copy
-                  0x0033ea                  _str_raw_copy
-                  0x003428                  _str_index_of_first_token
-                  0x003492                  _str_raw_index_of_first_token
-                  0x0034fc                  _str_index_of_last_token
-                  0x00356c                  _str_first_char
-                  0x0035ae                  _str_index_of_first_char
-                  0x0035e4                  _str_index_of_last_char
-                  0x00361c                  _str_last_char
-                  0x003662                  _str_sub_string
-                  0x0036f0                  _str_crop_string
-                  0x00374a                  _str_to_int
-                  0x0037da                  _str_trim_left
-                  0x003830                  _str_trim_right
-                  0x003882                  _str_remove_char
-                  0x0038d4                  _str_replace_char
- .text            0x003934        0x41a ../../library/os-lib/lib.X.a(led.o)
-                  0x003934                  _LED_Service
-                  0x003a08                  _LED_Flash
-                  0x003a24                  _LED_ModeSet
-                  0x003a3c                  _LED_PwmSet
-                  0x003a6e                  _LED_SetPwmPeriod
-                  0x003a96                  _LED_PwmSetOnTime
-                  0x003abe                  _LED_PwmSetShift
-                  0x003ae6                  _LED_Write
-                  0x003b5e                  _LED_Read
-                  0x003b94                  _LED_Init
-                  0x003bec                  _LED_Set
-                  0x003c1e                  _LED_Clr
-                  0x003c50                  _LED_Inv
-                  0x003cea                  _LED_Get
- .text            0x003d4e        0x2e0 ../../library/os-lib/lib.X.a(worker.o)
-                  0x003d4e                  _OS_WorkerInit
-                  0x003da0                  _OS_WorkerCreate
-                  0x003e12                  _OS_WorkerDelete
-                  0x003e7e                  _OS_WorkerSetCallback
-                  0x003e9c                  _OS_WorkerSleep
-                  0x003ec6                  _OS_WorkerWakeup
-                  0x003ef4                  _OS_WorkerWaitData
-                  0x003f1e                  _OS_WorkerSendData
-                  0x003f4c                  _OS_WorkerService
- .text            0x00402e        0x2ba ./output/main.o
-                  0x00402e                  _UartLineCallback
-                  0x0040c6                  _SwitchCallback
-                  0x0040ee                  _Worker1
-                  0x004284                  _main
- .text            0x0042e8        0x28a ../../library/os-lib/lib.X.a(psw.o)
-                  0x0042e8                  _PSW_Init
-                  0x004328                  _OS_SwitchSetCallback
-                  0x004342                  _PSW_Get
-                  0x0043ac                  _PSW_Scan
-                  0x0043ea                  _PSW_Read
-                  0x00445a                  _PSW_Service
- .text            0x004572        0x260 ../../library/os-lib/lib.X.a(stimer.o)
-                  0x004572                  _OS_TimerInit
-                  0x0045be                  _OS_TimerCreate
-                  0x00462c                  _OS_TimerDelete
-                  0x00468a                  _OS_TimerSetCallback
-                  0x0046a8                  _OS_TimerSetTicks
-                  0x0046c6                  _OS_TimerStop
-                  0x0046e2                  _OS_TimerStart
-                  0x004706                  _OS_TimerService
- .text            0x0047d2        0x122 ../../library/os-lib/lib.X.a(beep.o)
-                  0x0047d2                  _Beep_Init
-                  0x004812                  _Beep_FreqSet
-                  0x00485e                  _Beep_PowerSet
-                  0x00488a                  _Beep
-                  0x0048c6                  _Beep_Service
+.text             0x002620       0x23e2
+ .text            0x002620        0x7c2 ../../library/os-lib/lib.X.a(uart.o)
+                  0x002620                  _Uart1_GetRingBuffer
+                  0x002658                  _Uart2_GetRingBuffer
+                  0x002690                  _Uart1_ClearRingBuffer
+                  0x0026ba                  _Uart2_ClearRingBuffer
+                  0x0026e4                  _Uart1_Init
+                  0x0027ec                  _Uart2_Init
+                  0x0028f4                  _Uart1_AsyncWriteString
+                  0x00297e                  _Uart2_AsyncWriteString
+                  0x002a06                  _Uart1_AsyncWriteBytes
+                  0x002a7a                  _Uart1_AsyncWriteData
+                  0x002afa                  _Uart1_AsyncPutByte
+                  0x002b50                  _Uart2_AsyncWriteBytes
+                  0x002bc4                  _Uart2_AsyncWriteData
+                  0x002c44                  _Uart2_AsyncPutByte
+                  0x002cca                  _Uart1_WriteString
+                  0x002cf4                  _Uart2_WriteString
+                  0x002d1e                  _Uart1_PutByte
+                  0x002d2c                  _Uart2_PutByte
+                  0x002d3a                  _Uart1_WriteBytes
+                  0x002d6e                  _Uart2_WriteBytes
+                  0x002da2                  _Uart1_GetByte
+                  0x002dc2                  _Uart2_GetByte
+ .text            0x002de2        0x5c6 ../../library/os-lib/lib.X.a(os.o)
+                  0x002de2                  _OS_SystemTickSetCallback
+                  0x002df4                  _OS_Uart1SetRxCallback
+                  0x002e00                  _OS_Uart1SetLineReceivedCallback
+                  0x002e0c                  _OS_Uart1SetTxCallback
+                  0x002e18                  _OS_Uart2SetRxCallback
+                  0x002e24                  _OS_Uart2SetLineReceivedCallback
+                  0x002e30                  _OS_Uart2SetTxCallback
+                  0x002e3c                  _OS_WiFiSetFrameReceivedCallback
+                  0x002e48                  _OS_TimeService
+                  0x002e94                  _OS_TimeGet
+                  0x002eb8                  _OS_TimeSet
+                  0x002edc                  _OS_TimeHighResolution
+                  0x002f0c                  _OS_TimeMicroseconds
+                  0x002f34                  _OS_TimeMilliseconds
+                  0x002f3e                  _OS_TickedCheck
+                  0x002f50                  _OS_TimerCoreInit
+                  0x002f6e                  _OS_Sleep
+                  0x002f7a                  _OS_Initialise
+                  0x002f92                  _OS_WiFiFrameDetect
+                  0x003116                  _OS_LineDetect
+                  0x003178                  _OS_Execute
+ .text            0x0033a8        0x5aa ../../library/os-lib/lib.X.a(str.o)
+                  0x0033a8                  _str_length
+                  0x0033ce                  _str_copy
+                  0x003408                  _str_raw_copy
+                  0x003446                  _str_index_of_first_token
+                  0x0034b0                  _str_raw_index_of_first_token
+                  0x00351a                  _str_index_of_last_token
+                  0x00358a                  _str_first_char
+                  0x0035cc                  _str_index_of_first_char
+                  0x003602                  _str_index_of_last_char
+                  0x00363a                  _str_last_char
+                  0x003680                  _str_sub_string
+                  0x00370e                  _str_crop_string
+                  0x003768                  _str_to_int
+                  0x0037f8                  _str_trim_left
+                  0x00384e                  _str_trim_right
+                  0x0038a0                  _str_remove_char
+                  0x0038f2                  _str_replace_char
+ .text            0x003952        0x41a ../../library/os-lib/lib.X.a(led.o)
+                  0x003952                  _LED_Service
+                  0x003a26                  _LED_Flash
+                  0x003a42                  _LED_ModeSet
+                  0x003a5a                  _LED_PwmSet
+                  0x003a8c                  _LED_SetPwmPeriod
+                  0x003ab4                  _LED_PwmSetOnTime
+                  0x003adc                  _LED_PwmSetShift
+                  0x003b04                  _LED_Write
+                  0x003b7c                  _LED_Read
+                  0x003bb2                  _LED_Init
+                  0x003c0a                  _LED_Set
+                  0x003c3c                  _LED_Clr
+                  0x003c6e                  _LED_Inv
+                  0x003d08                  _LED_Get
+ .text            0x003d6c        0x3aa ./output/main.o
+                  0x003d6c                  _UartLineCallback
+                  0x003e04                  _SwitchCallback
+                  0x003e2c                  _Worker1
+                  0x0040b2                  _main
+ .text            0x004116        0x2e0 ../../library/os-lib/lib.X.a(worker.o)
+                  0x004116                  _OS_WorkerInit
+                  0x004168                  _OS_WorkerCreate
+                  0x0041da                  _OS_WorkerDelete
+                  0x004246                  _OS_WorkerSetCallback
+                  0x004264                  _OS_WorkerSleep
+                  0x00428e                  _OS_WorkerWakeup
+                  0x0042bc                  _OS_WorkerWaitData
+                  0x0042e6                  _OS_WorkerSendData
+                  0x004314                  _OS_WorkerService
+ .text            0x0043f6        0x28a ../../library/os-lib/lib.X.a(psw.o)
+                  0x0043f6                  _PSW_Init
+                  0x004436                  _OS_SwitchSetCallback
+                  0x004450                  _PSW_Get
+                  0x0044ba                  _PSW_Scan
+                  0x0044f8                  _PSW_Read
+                  0x004568                  _PSW_Service
+ .text            0x004680        0x260 ../../library/os-lib/lib.X.a(stimer.o)
+                  0x004680                  _OS_TimerInit
+                  0x0046cc                  _OS_TimerCreate
+                  0x00473a                  _OS_TimerDelete
+                  0x004798                  _OS_TimerSetCallback
+                  0x0047b6                  _OS_TimerSetTicks
+                  0x0047d4                  _OS_TimerStop
+                  0x0047f0                  _OS_TimerStart
+                  0x004814                  _OS_TimerService
+ .text            0x0048e0        0x122 ../../library/os-lib/lib.X.a(beep.o)
+                  0x0048e0                  _Beep_Init
+                  0x004920                  _Beep_FreqSet
+                  0x00496c                  _Beep_PowerSet
+                  0x004998                  _Beep
+                  0x0049d4                  _Beep_Service
 
-.dinit            0x0048f4        0x102
- .dinit           0x0048f4        0x102 data_init
+.dinit            0x004a02        0x102
+ .dinit           0x004a02        0x102 data_init
 
-.text             0x0049f6        0x29a
- .text            0x0049f6         0xfe ../../library/os-lib/lib.X.a(queue.o)
-                  0x0049f6                  _Queue_Init
-                  0x004a26                  _Queue_Put
-                  0x004a82                  _Queue_Get
-                  0x004ae2                  _Queue_Space
- .text            0x004af4         0xb0 ../../library/os-lib/lib.X.a(event.o)
-                  0x004af4                  _OS_EventPut
-                  0x004b40                  _OS_EventGet
-                  0x004b8e                  _OS_EventLoop
- .text            0x004ba4         0xac ../../library/os-lib/lib.X.a(adc.o)
-                  0x004ba4                  _ADC_Service
-                  0x004baa                  _Timer3Init
-                  0x004bc6                  _ADC_Scan
-                  0x004bcc                  _ADC_Read
-                  0x004bde                  _ADC_Init
- .text            0x004c50         0x40 ../../library/os-lib/lib.X.a(mcu.o)
-                  0x004c50                  _MCU_UnlockRegisters
-                  0x004c62                  _MCU_LockRegisters
-                  0x004c74                  _MCU_Init
+.text             0x004b04        0x29a
+ .text            0x004b04         0xfe ../../library/os-lib/lib.X.a(queue.o)
+                  0x004b04                  _Queue_Init
+                  0x004b34                  _Queue_Put
+                  0x004b90                  _Queue_Get
+                  0x004bf0                  _Queue_Space
+ .text            0x004c02         0xb0 ../../library/os-lib/lib.X.a(event.o)
+                  0x004c02                  _OS_EventPut
+                  0x004c4e                  _OS_EventGet
+                  0x004c9c                  _OS_EventLoop
+ .text            0x004cb2         0xac ../../library/os-lib/lib.X.a(adc.o)
+                  0x004cb2                  _ADC_Service
+                  0x004cb8                  _Timer3Init
+                  0x004cd4                  _ADC_Scan
+                  0x004cda                  _ADC_Read
+                  0x004cec                  _ADC_Init
+ .text            0x004d5e         0x40 ../../library/os-lib/lib.X.a(mcu.o)
+                  0x004d5e                  _MCU_UnlockRegisters
+                  0x004d70                  _MCU_LockRegisters
+                  0x004d82                  _MCU_Init
 
-.init.delay32     0x004c90         0x1c
- .init.delay32    0x004c90         0x1c e:/program files (x86)/microchip/xc16/v1.40/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
-                  0x004c90                  ___delay32
+.init.delay32     0x004d9e         0x1c
+ .init.delay32    0x004d9e         0x1c e:/program files (x86)/microchip/xc16/v1.40/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
+                  0x004d9e                  ___delay32
