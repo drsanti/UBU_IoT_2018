@@ -199,7 +199,7 @@ void Worker1(void *param)
 
 
     //!!
-    //!! led:[0,1,2,3]:[on,off]
+    //!! led:[0,1,2,3]:[on, off, inv]
     //!!led:n:?
     if ((0 == str_index_of_first_token(line_data, "led:")) && (line_data[6] != '?'))
     {
@@ -234,6 +234,7 @@ void Worker1(void *param)
         }else {
             //ok = 0;
         }
+
         if(ok!=0) {
             RESPONSE_OK(line_data);
         }else{
@@ -330,7 +331,7 @@ void Worker1(void *param)
 
     //!! Beep sound
     //!! beep:1000:2500 --> beep:<freq>:<period>
-    if (0 == str_index_of_first_token(line_data, "beep:"))
+    else if (0 == str_index_of_first_token(line_data, "beep:"))
     {
         int i1 = str_index_of_first_token(line_data + 0, ":");                // Index of the first colon
         int i2 = str_index_of_first_token(line_data + i1 + 1, ":") + i1 + 1;  // Index of the second colon
@@ -364,7 +365,7 @@ void Worker1(void *param)
     //!! PWM
     //!! pwm:0:1000:2500 --> beep:<id><period>:<shift><ontime>
     //!! void LED_PwmSet(uint8_t id, uint16_t period_ticks, uint16_t shift_ticks, uint16_t on_ticks);
-    if (0 == str_index_of_first_token(line_data, "pwm:"))
+    else if (0 == str_index_of_first_token(line_data, "pwm:"))
     {
 
         char id = line_data[4]-0x30;
@@ -415,7 +416,7 @@ void Worker1(void *param)
 
     //!! ADCs
     //!! adc:[0,1,2,3]?
-    if (0 == str_index_of_first_token(line_data, "adc:"))
+    else if (0 == str_index_of_first_token(line_data, "adc:"))
     {
         char buff[32];
         if (line_data[5] == ':' && line_data[6] == '?')
@@ -430,15 +431,14 @@ void Worker1(void *param)
             }
         }
         else {
-            UART1_AsyncWriteString("Command Error!: ");
-            UART1_AsyncWriteString(line_data);
+           RESPONSE_ERROR(line_data);
         }
     }
 
 
     //!! PSWs
     //!! psw:[0,1,2,3]?
-    if (0 == str_index_of_first_token(line_data, "psw:"))
+    else if (0 == str_index_of_first_token(line_data, "psw:"))
     {
         char buff[32];
         if (line_data[5] == ':' && line_data[6] == '?')
@@ -453,15 +453,14 @@ void Worker1(void *param)
             }
         }
         else {
-            UART1_AsyncWriteString("Command Error!: ");
-            UART1_AsyncWriteString(line_data);
+            RESPONSE_ERROR(line_data);
         }
     }
 
 
     //!! LEDs
     //!! led:[0,1,2,3]?
-    if (0 == str_index_of_first_token(line_data, "led:"))
+    else if (0 == str_index_of_first_token(line_data, "led:"))
     {
         char buff[32];
         if (line_data[5] == ':' && line_data[6] == '?')
@@ -474,10 +473,12 @@ void Worker1(void *param)
                 sprintf(buff, "led:%d:%d\r\n", id_i, led_val);
                 UART1_AsyncWriteString(buff);
             }
+            else {
+                RESPONSE_ERROR(line_data);
+            }
         }
         else {
-            UART1_AsyncWriteString("Command Error!: ");
-            UART1_AsyncWriteString(line_data);
+            RESPONSE_ERROR(line_data);
         }
     }
 }
