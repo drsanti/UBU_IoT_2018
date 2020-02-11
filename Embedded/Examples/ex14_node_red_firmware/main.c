@@ -121,6 +121,8 @@ uint16_t _adc_thv[4]    = {20,   20,  20,  20};      // Default threshold values
 uint16_t _adc_period[4] = {250, 250, 250, 250};      // 250 mS, 0 means disabled
 uint16_t _adc_ticks[4]  = {0,     0,   0,   0};      // reset
 
+// uint16_t _ticks = 0;
+// uint32_t _tick_5sec = 0;
 
 
 //!! Callback function
@@ -174,11 +176,20 @@ void Worker1(void *param)
             // Print
             if( dir != 0) {
                 char buff[32];
-                sprintf(buff, "det:%i:%i:%s\r\n", i, _adc_val[i], (dir<0?"dec":dir>0?"inc":""));
+                sprintf(buff, "det:%i:%i:%c%i\r\n", i, _adc_val[i], (dir>=0?'+':'-'), _adc_del[i]); // _adc_del[i] always positive
                 UART1_AsyncWriteString(buff);
             }
         }
     }
+
+    // Ticking
+    // _ticks += UPDATE_INTERVAL_MS;
+    // if(_ticks >= 5000) {
+    //     _ticks = 0;
+    //    char buff[32];
+    //    sprintf(buff, "sts:1:%ld\r\n", ++_tick_5sec);
+    //    UART1_AsyncWriteString(buff);
+    // }
 
 
     //!! Check if the command in the buffer
@@ -481,6 +492,9 @@ void Worker1(void *param)
             RESPONSE_ERROR(line_data);
         }
     }
+    else if(0 == str_index_of_first_token(line_data, "ver:0:0")) {
+        RESPONSE_ERROR("24GA002\r\n");
+    }
 }
 
 
@@ -530,6 +544,5 @@ int main(void)
         Worker1                 // callback function
     );
 
-    UART1_AsyncWriteString("\r\nReady\r\n");
     OS_Start();
 }
